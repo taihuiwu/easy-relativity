@@ -2,6 +2,10 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Stars } from '@react-three/drei'
 import { Suspense } from 'react'
 import { LightSpeedShip } from './LightSpeedShip'
+import { TimeDilation } from './TimeDilation'
+import { LengthContraction } from './LengthContraction'
+import { MassEnergy } from './MassEnergy'
+import { EquivalencePrinciple } from './EquivalencePrinciple'
 import { SpacetimeCurvature } from './SpacetimeCurvature'
 import { GravitationalLens } from './GravitationalLens'
 import { BlackHole } from './BlackHole'
@@ -15,6 +19,14 @@ export function SceneContainer({ scene }: SceneContainerProps) {
     switch (scene) {
       case 'lightSpeed':
         return <LightSpeedShip />
+      case 'timeDilation':
+        return <TimeDilation />
+      case 'lengthContraction':
+        return <LengthContraction />
+      case 'massEnergy':
+        return <MassEnergy />
+      case 'equivalencePrinciple':
+        return <EquivalencePrinciple />
       case 'spacetimeCurvature':
         return <SpacetimeCurvature />
       case 'gravitationalLens':
